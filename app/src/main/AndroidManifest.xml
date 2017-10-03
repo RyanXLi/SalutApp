@@ -24,7 +24,6 @@
         </activity>
         <activity android:name=".ClientActivity" />
         <activity android:name=".HostActivity" />
-        <activity android:name=".ClientChatActivity" />
     </application>
 
 </manifest>

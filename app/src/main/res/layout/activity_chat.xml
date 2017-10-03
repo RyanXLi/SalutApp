@@ -14,7 +14,10 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/chat_send"/>
+        app:layout_constraintBottom_toTopOf="@+id/chat_send"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        />
     <Button
         android:id="@+id/chat_send"
         android:layout_width="wrap_content"
