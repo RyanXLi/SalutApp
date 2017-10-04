@@ -53,7 +53,7 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
 
 
         dataReceiver = new SalutDataReceiver(this, this);
-        serviceData = new SalutServiceData("myService", 50489, android.os.Build.MODEL);
+        serviceData = new SalutServiceData("myService", 6666, android.os.Build.MODEL);
 
         salut = new MySalut(dataReceiver, serviceData, new SalutCallback() {
             @Override
@@ -82,7 +82,8 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        salut.stopNetworkService(true);
+        salut.stopServiceDiscovery(true);
+        salut.stopNetworkService(false);
     }
 
     @Override

@@ -1,0 +1,20 @@
+10-04 11:14:55.450 513-513/com.ryanxli.salutapp D/Salut: Attempting to connect to another device.
+10-04 11:14:58.383 513-513/com.ryanxli.salutapp V/Salut: Successfully connected to another device.
+10-04 11:14:58.386 513-1104/com.ryanxli.salutapp D/Salut: Attempting to transfer registration data with the server...
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err: java.net.ConnectException: failed to connect to /192.168.49.1 (port 37500): connect failed: ECONNREFUSED (Connection refused)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at libcore.io.IoBridge.connect(IoBridge.java:124)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:183)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:452)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at java.net.Socket.connect(Socket.java:884)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at java.net.Socket.connect(Socket.java:827)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at com.peak.salut.BackgroundClientRegistrationJob.doOnBackground(BackgroundClientRegistrationJob.java:41)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at com.arasthel.asyncjob.AsyncJob$2.run(AsyncJob.java:59)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at java.lang.Thread.run(Thread.java:818)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err: Caused by: android.system.ErrnoException: connect failed: ECONNREFUSED (Connection refused)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at libcore.io.Posix.connect(Native Method)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at libcore.io.BlockGuardOs.connect(BlockGuardOs.java:111)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at libcore.io.IoBridge.connectErrno(IoBridge.java:137)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err:     at libcore.io.IoBridge.connect(IoBridge.java:122)
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp W/System.err: 	... 7 more
+10-04 11:14:58.391 513-1104/com.ryanxli.salutapp E/Salut: An error occurred while attempting to register or unregister.
+10-04 11:14:58.393 513-513/com.ryanxli.salutapp D/SalutApp: We failed to register.
