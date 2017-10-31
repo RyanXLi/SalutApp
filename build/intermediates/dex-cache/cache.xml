@@ -2,202 +2,202 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_c87bd87e7c40affb19f42b75d1d9587a033b3d80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\f22e763873ac7ff3acac829238b38517ad291a5b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_b74e9815a55368dd9fa1b98ab34d185025858325.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\f45cc63b6a7aeca0a01f11c4a950519e3a244dc8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_9a2c1f1ddae76e4d8dffc1969692db91f12c822e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\eeb4d49140da11cf1d276f812641d8d9e67e1334\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_4d3e21e5b8f8e4835718538254958a97c5f7e462.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\a2a6c44dd370ac44c7e809040903ade963d84c5a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_61a55a9041977bea3bd251cb6fdbd95771789a2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\56e9a8f3a229d51a67f0b709ac637b688c8a0ee5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_a882389d29a2c668555dd3ab80cb1304506af69d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\85f1357f1938a0c304d380d3db6d05f6bd73a5d2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_e1b6c5915683ee32bb354320045169e4bc211f83.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\1ceb5e916c03a82344f779169768bf1d0cab68e0\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_7a0561f645530001d3187e1ddd960eb4de96be40.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_5f82b56fde09a608b9b2d521d8a402fd3585c05f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\589afc7705aeb05dd00e4e046a58f4baf19294e7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_bf7f68a394bf4bc3f904717aec443a8b0c374045.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.5.1\e2a00ad1d7e540ec395e9296a34da484c8888d4d\jackson-core-2.5.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e2a00ad1d7e540ec395e9296a34da484c8888d4d">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\jackson-core-2.5.1_9885486cfcd42c1271face6bf7507e7f6c855dfe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\99e91334a6658f5159dc16049b0ce3ed909ec4d4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_894b76bc98f4c4584f776fd366141b57d87ab6f1.jar" />
+    </item>
+    <item
         is-multidex="true"
-        jar="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_48ca28c8a2d42072c5f63684f05112d13069e711\classes.dex" />
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_dab7fc859b0a975d03a23a3a3708dbf007a25945\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.gradle\caches\modules-2\files-2.1\com.bluelinelabs\logansquare\1.3.4\44262279e900a296de2a3af5629bbdd6832d8a52\logansquare-1.3.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="44262279e900a296de2a3af5629bbdd6832d8a52">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\logansquare-1.3.4_3a2ae20e1172818b1d434065b635d271fc7e1203\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\e50586e9f43d2c6799eebf2cac5d3fa4c49a2ef2\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6bf89b6a6379c0ebd1857e053c233cdb2d105258\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\42d7b985515ff6b3fe849a422db39237313f09db\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_64c0000cff33f6d0e98d4d25e4538a132e884d38\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\commons-io\commons-io\2.4\commons-io-2.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="b1b6ea3b7e4aa4f492509a4952029cd8e48019ad">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\commons-io-2.4_b2955a73e8fdec69863902c786dced8321b28c5c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\c62c211405df3e30056bfc439f152a6f91c150d0\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\81eecd43dbeac80584e360d13ad15729cb01af25\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e048d9f514bb1b7de9aeea4561ee64d48cfa10b5\classes.dex" />
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_fe34d218fb6e475c2d5cf130bd6b3859cff4566b.jar" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\e785efa5ac92044784710a261511d3d6568b8008\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="10e9395f20f5a966d74c4294462c65c4483c97ed">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a742edbb77ac84a77670401658b90bc18097737a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\09bf1c5d3cb69dc076c9f6e9c0f30db9591b7fc1\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_a0c9a14b435f4aa26d52c3f08e68a1f88763aa1a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\7cc92d017d37ea400193a560f4885ad96f0681bf\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_202d0234b4eec12dacafb3e4d841ee31d08d5688\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\b602a9f06cb60b06251a58566a62cb6af7d4b805\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_28ca705a0aef88b970ae3d40172b04cf36e25b21\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\4be02719cd564d28939160143e947f7821d025c6\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5ec500f044a6658d0c6c056e713d73ac3e5d3532\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\bf670e101cadd04e7c9923ec7ac0f8e659b43084\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5c23d90c92281fc8c0748849453e389ce78a1aa9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\85279746e4d1ba37d733aa6e9ea5fa7a3a7f9b9e\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_17413361a83388239a199c7af4271dbe3fe6d28a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\9ed9315c1a2284b76cf5de6454d61ad30022f1e5\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="c67e97e8c6f9d5fd75a479be5a7daa19647a5759">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9d89b26f681b92b4fc15c42eeb1b21b2ca9e5659\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_85ac1388aeec9e6ea2d85d626a1c0dfaaf53e515\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\d5a479531b32d395d177a7dcbab972bac650544b\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_bbc151234c595526dc148b2fa4db7c48bd0c2f5d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.5.1\e2a00ad1d7e540ec395e9296a34da484c8888d4d\jackson-core-2.5.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="e2a00ad1d7e540ec395e9296a34da484c8888d4d">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\jackson-core-2.5.1_3ca685541a3cc2518309cf59bc6a567e7e71b7e1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_7cf7a4a191b78c65d4110a83fdf5d11cd5d63b21\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="ae1ef6c8341a21ed1d8fb25ce3ee6f99a8e60b60">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_0cfb2d6bc2b040d2a29c2332883250abd6d5a7ee\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\228a7ef3e42f05dd2a79239d04606f6d1c04485e\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_11861d89ad6a92973a155b52578408c882eb0886\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\336ad98bf142690672b456b216e4df22f3ecec88\output\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\08eea222c9575f99525cd51a566b3032f8db359b\output\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="26.0.1"
         sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0d272ab721a037487c1859b57b2cfd189b9a32c5\classes.dex" />
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_834544c3faf1b3c7b044614c1281ad697389f246.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\RyanX\.android\build-cache\addbbe6e15645aa72fcc87507075f45a6f5b5c7e\output\jars\classes.jar"
+        jar="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="95519720620b553f63afc789beba9ad582807f7c">
-        <dex dex="C:\Users\RyanX\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ef3bc8cc1bd634b761997eeb63e2136619cfc1c8\classes.dex" />
+        sha1="273f39cf4eb24abe3a63300504757dcc7cea77ed">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7e8ee36347f2475328cbf1205a1f33bbd2cccb43\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\b273fa29abfe6f5b48c6ea64bf49b9cb8685d30d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_1f793393ed9d172ff7ea9e9d19a24c8e7fec13b9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\5defffea40ef48a23ea44478ffad7ffc6ed9c5c2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c67e97e8c6f9d5fd75a479be5a7daa19647a5759">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_53753794f946df37e9bc315d56c66fcba6a241b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.gradle\caches\modules-2\files-2.1\com.bluelinelabs\logansquare\1.3.4\44262279e900a296de2a3af5629bbdd6832d8a52\logansquare-1.3.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44262279e900a296de2a3af5629bbdd6832d8a52">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\logansquare-1.3.4_f7c3e270cfb7f73d22f4edafe337d8f2b682f2b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\89d3c6424ef72aad80e3651d0716ab1ce772f13d\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_ee17e3b137375e67d9c9be1ebc069750229aaced.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\guava\guava\18.0\guava-18.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\guava-18.0_23ae9d619c9ad952ac11ce7bff78df802e3e98c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Ryan\.android\build-cache\8155e81a561b69f76f3a77bd88db93c79e659c03\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="80340ac20678b44e68e30f208b70bbee2d472f27">
+        <dex dex="C:\Users\Ryan\AndroidStudioProjects\SalutApp\app\build\intermediates\pre-dexed\debug\classes_2d54edd44eda1fbb83d5622b601b0105139bf7eb.jar" />
     </item>
 
 </items>

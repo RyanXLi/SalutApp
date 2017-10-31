@@ -100,7 +100,7 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
                         changeContentView();
                     }
                     if (!found) {
-                        Toast.makeText(getApplicationContext(), "Device" + deviceName + "is not not available.", Toast.LENGTH_SHORT);
+                        Toast.makeText(getApplicationContext(), "Device" + deviceName + "is not not available.", Toast.LENGTH_SHORT).show();
                         deviceArrayList.remove(position);
                     }
                 }
@@ -117,28 +117,7 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
         editText = (EditText) findViewById(R.id.chat_editText);
         messageListView = (ListView) findViewById(R.id.chat_listView);
 
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String content = editText.getText().toString();
-                if (!"".equals(content)) {
-                    Message toSend = new Message();
-                    toSend.content = content;
-                    toSend.sender = android.os.Build.MODEL + " (host)";
-                    salut.sendToHost(toSend, new SalutCallback() {
-                        @Override
-                        public void call() {
-                            Log.e(TAG, "The data failed to send.");
-                        }
-                    });
-                    messageArrayList.add(toSend.sender + ": " + toSend.content);
-                    messageArrayAdapter.notifyDataSetChanged();
-                    messageListView.smoothScrollToPosition(messageArrayList.size() - 1);
-                    editText.setText("");
-                }
-            }
-        });
-
+        sendButton.setOnClickListener(this);
         messageArrayList = new ArrayList<>();
         messageArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.device_adapter, messageArrayList);
         messageListView.setAdapter(messageArrayAdapter);
@@ -148,8 +127,7 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        salut.stopServiceDiscovery(true);
-        salut.unregisterClient(false);
+        salut.unregisterClient(true);
     }
 
     @Override
@@ -160,7 +138,7 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
             Message newMessage = LoganSquare.parse((String) data, Message.class);
             Log.d(TAG, newMessage.sender);
             Log.d(TAG, newMessage.content);
-            messageArrayList.add(newMessage.sender + ": " + newMessage);
+            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
             messageArrayAdapter.notifyDataSetChanged();
             messageListView.smoothScrollToPosition(messageArrayList.size() - 1);
         }
@@ -172,6 +150,26 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
 
     @Override
     public void onClick(View v) {
+            String content = editText.getText().toString();
+            if (!"".equals(content)) {
+                Message toSend = new Message();
+                toSend.content = content;
+                toSend.sender = android.os.Build.MODEL + " (client)";
+                salut.sendToHost(toSend, new SalutCallback() {
+                    @Override
+                    public void call() {
+                        Log.e(TAG, "The data failed to send.");
+                    }
+                });
+                messageArrayList.add(toSend.sender + ": " + toSend.content);
+                messageArrayAdapter.notifyDataSetChanged();
+                messageListView.smoothScrollToPosition(messageArrayList.size() - 1);
+                editText.setText("");
+            }
+    }
 
+    private static String Create10mbData() {
+        char[] chars = new char[1024 * 1024 * 10];
+        return new String(chars);
     }
 }

@@ -63,13 +63,6 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
             }
         });
 
-        salut.startNetworkService(new SalutDeviceCallback() {
-            @Override
-            public void call(SalutDevice device) {
-                Log.d(TAG, device.readableName + " has connected!");
-                // TODO: put into listView
-            }
-        });
 
         salut.startNetworkService(new SalutDeviceCallback() {
             @Override
@@ -83,8 +76,7 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        salut.stopServiceDiscovery(true);
-        salut.stopNetworkService(false);
+        salut.stopNetworkService(true);
     }
 
     @Override
@@ -95,7 +87,10 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
             Message newMessage = LoganSquare.parse((String) data, Message.class);
             Log.d(TAG, newMessage.sender);
             Log.d(TAG, newMessage.content);
-            messageArrayList.add(newMessage.sender + ": " + newMessage);
+            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
+            Log.d(TAG, "added.");
+            arrayAdapter.notifyDataSetChanged();
+            listView.smoothScrollToPosition(messageArrayList.size() - 1);
         }
         catch (IOException ex)
         {
