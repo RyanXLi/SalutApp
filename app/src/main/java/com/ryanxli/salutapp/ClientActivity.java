@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.bluelinelabs.logansquare.LoganSquare;
 import com.peak.salut.Callbacks.SalutCallback;
 import com.peak.salut.Callbacks.SalutDataCallback;
+import com.peak.salut.Salut;
 import com.peak.salut.SalutDataReceiver;
 import com.peak.salut.SalutDevice;
 import com.peak.salut.SalutServiceData;
@@ -26,7 +27,7 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
     public static final String TAG = "SalutApp";
     public SalutDataReceiver dataReceiver;
     public SalutServiceData serviceData;
-    public MySalut salut;
+    public Salut salut;
 
     public ListView deviceListView;
     public ArrayAdapter deviceArrayAdapter;
@@ -51,7 +52,7 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
         dataReceiver = new SalutDataReceiver(this, this);
         serviceData = new SalutServiceData("myService", 6666, android.os.Build.MODEL);
 
-        salut = new MySalut(dataReceiver, serviceData, new SalutCallback() {
+        salut = new Salut(dataReceiver, serviceData, new SalutCallback() {
             @Override
             public void call() {
                 Log.e(TAG, "Sorry, but this device does not support WiFi Direct.");

@@ -18,4 +18,10 @@ public class Message {
     @JsonField
     public String sender;
 
+    @JsonField
+    public String startTime;
+
+    @JsonField
+    public String endTime;
+
 }
