@@ -38,6 +38,9 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
     public ArrayAdapter<String> arrayAdapter;
     public ArrayList<String> messageArrayList;
 
+    public ArrayAdapter<Long> timeArrayAdapter;
+    public ArrayList<Long> timeArrayList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,8 +52,13 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
         sendButton.setOnClickListener(this);
 
         messageArrayList = new ArrayList<>();
+        timeArrayList = new ArrayList<>(); // TODO: REMOVE
+
         arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.device_adapter, messageArrayList);
         listView.setAdapter(arrayAdapter);
+
+//        timeArrayAdapter = new ArrayAdapter<Long>(getApplicationContext(), R.layout.device_adapter, timeArrayList);
+//        listView.setAdapter(arrayAdapter);
 
 
         dataReceiver = new SalutDataReceiver(this, this);
@@ -81,13 +89,36 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
 
     @Override
     public void onDataReceived(Object data) {
+//        Log.d(TAG, "Received network data.");
+//        try
+//        {
+//            Message newMessage = LoganSquare.parse((String) data, Message.class);
+//            Log.d(TAG, newMessage.sender);
+//            Log.d(TAG, newMessage.content);
+//            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
+//            Log.d(TAG, "added.");
+//            arrayAdapter.notifyDataSetChanged();
+//            listView.smoothScrollToPosition(messageArrayList.size() - 1);
+//        }
+//        catch (IOException ex)
+//        {
+//            Log.e(TAG, "Failed to parse network data.");
+//        }
+
+
         Log.d(TAG, "Received network data.");
         try
         {
             Message newMessage = LoganSquare.parse((String) data, Message.class);
-            Log.d(TAG, newMessage.sender);
-            Log.d(TAG, newMessage.content);
-            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
+            newMessage.receiveTime = System.currentTimeMillis();
+            String speed = Long.toString((ClientActivity.trialSize * 1000)/(newMessage.receiveTime - newMessage.sendTime));
+
+            Log.d(TAG, newMessage.sender + ": " + speed + " kbps");
+
+
+            messageArrayList.add(newMessage.sender + ": " + speed + " kbps");
+            // in kbps
+
             Log.d(TAG, "added.");
             arrayAdapter.notifyDataSetChanged();
             listView.smoothScrollToPosition(messageArrayList.size() - 1);
@@ -100,22 +131,32 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
 
     @Override
     public void onClick(View v) {
-        String content = editText.getText().toString();
-        if (!"".equals(content)) {
-            Message toSend = new Message();
-            toSend.content = content;
-            toSend.sender = android.os.Build.MODEL + " (host)";
-            salut.sendToAllDevices(toSend, new SalutCallback() {
-                @Override
-                public void call() {
-                    Log.e(TAG, "The data failed to send.");
-                }
-            });
-            messageArrayList.add(toSend.sender + ": " + toSend.content);
-            arrayAdapter.notifyDataSetChanged();
-            listView.smoothScrollToPosition(messageArrayList.size() - 1);
-            editText.setText("");
-        }
+//        String content = editText.getText().toString();
+//        if (!"".equals(content)) {
+//            Message toSend = new Message();
+//            toSend.content = content;
+//            toSend.sender = android.os.Build.MODEL + " (host)";
+//            salut.sendToAllDevices(toSend, new SalutCallback() {
+//                @Override
+//                public void call() {
+//                    Log.e(TAG, "The data failed to send.");
+//                }
+//            });
+//            messageArrayList.add(toSend.sender + ": " + toSend.content);
+//            arrayAdapter.notifyDataSetChanged();
+//            listView.smoothScrollToPosition(messageArrayList.size() - 1);
+//            editText.setText("");
+//        }
+        Message toSend = new Message();
+        toSend.content = ClientActivity.createMBData(ClientActivity.trialSize);
+        toSend.sender = android.os.Build.MODEL + " (host)";
+        toSend.sendTime = System.currentTimeMillis();
+        salut.sendToAllDevices(toSend, new SalutCallback() {
+            @Override
+            public void call() {
+                Log.e(TAG, "The data failed to send.");
+            }
+        });
     }
 }
 

@@ -39,7 +39,8 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
     public ArrayList<String> messageArrayList;
     public ArrayList<String> deviceArrayList;
 
-    public ClientActivity that;
+    public static int trials = 10;
+    public static int trialSize = 1024 * 2; // in KB
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,12 +134,33 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
     @Override
     public void onDataReceived(Object data) {
         Log.d(TAG, "Received network data.");
+//        try
+//        {
+//            Message newMessage = LoganSquare.parse((String) data, Message.class);
+//            Log.d(TAG, newMessage.sender);
+//            Log.d(TAG, newMessage.content);
+//            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
+//            messageArrayAdapter.notifyDataSetChanged();
+//            messageListView.smoothScrollToPosition(messageArrayList.size() - 1);
+//        }
+//        catch (IOException ex)
+//        {
+//            Log.e(TAG, "Failed to parse network data.");
+//        }
+
         try
         {
             Message newMessage = LoganSquare.parse((String) data, Message.class);
-            Log.d(TAG, newMessage.sender);
-            Log.d(TAG, newMessage.content);
-            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
+            newMessage.receiveTime = System.currentTimeMillis();
+            String speed = Long.toString((ClientActivity.trialSize * 1000)/(newMessage.receiveTime - newMessage.sendTime));
+
+            Log.d(TAG, newMessage.sender + ": " + speed + " kbps");
+
+
+            messageArrayList.add(newMessage.sender + ": " + speed + " kbps");
+            // in kbps
+
+            Log.d(TAG, "added.");
             messageArrayAdapter.notifyDataSetChanged();
             messageListView.smoothScrollToPosition(messageArrayList.size() - 1);
         }
@@ -150,26 +172,46 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
 
     @Override
     public void onClick(View v) {
-            String content = editText.getText().toString();
-            if (!"".equals(content)) {
-                Message toSend = new Message();
-                toSend.content = content;
-                toSend.sender = android.os.Build.MODEL + " (client)";
-                salut.sendToHost(toSend, new SalutCallback() {
-                    @Override
-                    public void call() {
-                        Log.e(TAG, "The data failed to send.");
-                    }
-                });
-                messageArrayList.add(toSend.sender + ": " + toSend.content);
-                messageArrayAdapter.notifyDataSetChanged();
-                messageListView.smoothScrollToPosition(messageArrayList.size() - 1);
-                editText.setText("");
-            }
+//        String content = editText.getText().toString();
+//        if (!"".equals(content)) {
+//            Message toSend = new Message();
+//            toSend.content = content;
+//            toSend.sender = android.os.Build.MODEL + " (client)";
+//            salut.sendToHost(toSend, new SalutCallback() {
+//                @Override
+//                public void call() {
+//                    Log.e(TAG, "The data failed to send.");
+//                }
+//            });
+//            messageArrayList.add(toSend.sender + ": " + toSend.content);
+//            messageArrayAdapter.notifyDataSetChanged();
+//            messageListView.smoothScrollToPosition(messageArrayList.size() - 1);
+//            editText.setText("");
+//        for (int i = 0; i < trials; i++) {
+            Message toSend = new Message();
+            toSend.content = createMBData(trialSize);
+            toSend.sender = android.os.Build.MODEL + " (client)";
+            toSend.sendTime = System.currentTimeMillis();
+            salut.sendToHost(toSend, new SalutCallback() {
+                @Override
+                public void call() {
+                    Log.e(TAG, "The data failed to send.");
+                }
+            });
+
+//            try
+//            {
+//                Thread.sleep(1000);
+//            }
+//            catch(InterruptedException ex)
+//            {
+//                Thread.currentThread().interrupt();
+//            }
+//        }
     }
 
-    private static String Create10mbData() {
-        char[] chars = new char[1024 * 1024 * 10];
+    public static String createMBData(int size) {
+        char[] chars = new char[1024 * size];
         return new String(chars);
     }
 }

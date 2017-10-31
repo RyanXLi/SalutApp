@@ -19,9 +19,9 @@ public class Message {
     public String sender;
 
     @JsonField
-    public String startTime;
+    public long sendTime;
 
     @JsonField
-    public String endTime;
+    public long receiveTime;
 
 }
