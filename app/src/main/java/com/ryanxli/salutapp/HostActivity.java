@@ -148,7 +148,7 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
 //            editText.setText("");
 //        }
         Message toSend = new Message();
-        toSend.content = ClientActivity.createMBData(ClientActivity.trialSize);
+        toSend.content = ClientActivity.createKBData(ClientActivity.trialSize);
         toSend.sender = android.os.Build.MODEL + " (host)";
         toSend.sendTime = System.currentTimeMillis();
         salut.sendToAllDevices(toSend, new SalutCallback() {

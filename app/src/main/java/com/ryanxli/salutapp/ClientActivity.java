@@ -189,7 +189,7 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
 //            editText.setText("");
 //        for (int i = 0; i < trials; i++) {
             Message toSend = new Message();
-            toSend.content = createMBData(trialSize);
+            toSend.content = createKBData(trialSize);
             toSend.sender = android.os.Build.MODEL + " (client)";
             toSend.sendTime = System.currentTimeMillis();
             salut.sendToHost(toSend, new SalutCallback() {
@@ -210,8 +210,14 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
 //        }
     }
 
-    public static String createMBData(int size) {
-        char[] chars = new char[1024 * size];
+    public static String createKBData(int size) {
+//        int[] ints = new int[1024 / Integer.SIZE * size];
+//        return ints;
+        int arraySize = 1024 / Character.SIZE * size;
+        char[] chars = new char[arraySize];
+//        for (int i = 0; i < arraySize; i++) {
+//            chars[i] = '0';
+//        }
         return new String(chars);
     }
 }
