@@ -95,7 +95,7 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
             Message newMessage = LoganSquare.parse((String) data, Message.class);
             Log.d(TAG, newMessage.sender);
             Log.d(TAG, newMessage.content);
-            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
+            messageArrayList.add(newMessage.content);
             Log.d(TAG, "added.");
             arrayAdapter.notifyDataSetChanged();
             listView.smoothScrollToPosition(messageArrayList.size() - 1);
@@ -131,24 +131,46 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
 
     @Override
     public void onClick(View v) {
-        String content = editText.getText().toString();
-        if (!"".equals(content)) {
-            Message toSend = new Message();
-            toSend.content = content;
-            toSend.sender = android.os.Build.MODEL + " (host)";
-            salut.sendToAllDevices(toSend, new SalutCallback() {
-                @Override
-                public void call() {
-                    Log.e(TAG, "The data failed to send.");
-                }
-            });
-            messageArrayList.add(toSend.sender + ": " + toSend.content);
-            arrayAdapter.notifyDataSetChanged();
-            listView.smoothScrollToPosition(messageArrayList.size() - 1);
-            editText.setText("");
+//        String content = editText.getText().toString();
+//        if (!"".equals(content)) {
+//            Message toSend = new Message();
+//            toSend.content = content;
+//            toSend.sender = android.os.Build.MODEL + " (host)";
+//            salut.sendToAllDevices(toSend, new SalutCallback() {
+//                @Override
+//                public void call() {
+//                    Log.e(TAG, "The data failed to send.");
+//                }
+//            });
+//            messageArrayList.add(toSend.sender + ": " + toSend.content);
+//            arrayAdapter.notifyDataSetChanged();
+//            listView.smoothScrollToPosition(messageArrayList.size() - 1);
+//            editText.setText("");
+//        }
+
+        ArrayList<Long> diffs = new ArrayList<>();
+
+        for (String str : messageArrayList) {
+            diffs.add(Long.parseLong(str));
         }
 
+        double sum = 0.0;
+        double mean = 0.0;
+        double num = 0.0;
+        double sd = 0.0;
 
+        for (long i : diffs) { sum+=i; }
+        mean = sum / diffs.size();
+
+        for (long i : diffs) {
+            num += Math.pow((double) i - mean, 2);
+        }
+        sd = Math.sqrt(num/diffs.size());
+
+        messageArrayList.add("mean: " + mean + "\nsd: " + sd);
+        Log.d(TAG, "added.");
+        arrayAdapter.notifyDataSetChanged();
+        listView.smoothScrollToPosition(messageArrayList.size() - 1);
 
 //        Message toSend = new Message();
 //        toSend.content = ClientActivity.createKBData(ClientActivity.trialSize);

@@ -33,6 +33,7 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
     public ArrayAdapter deviceArrayAdapter;
 
     public Button sendButton;
+    public Button calcButton;
     public EditText editText;
     public ListView messageListView;
     public ArrayAdapter<String> messageArrayAdapter;
@@ -42,13 +43,15 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
     public static int trials = 10;
     public static int trialSize = 1024 * 2; // in KB
 
+    public static ArrayList<Long> startTimes = new ArrayList<>();
+    public static ArrayList<Long> foundTimes = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client);
 
         deviceListView = (ListView) findViewById(R.id.client_listView);
-
 
         dataReceiver = new SalutDataReceiver(this, this);
         serviceData = new SalutServiceData("myService", 6666, android.os.Build.MODEL);
@@ -65,13 +68,45 @@ public class ClientActivity extends AppCompatActivity implements SalutDataCallba
         deviceArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.device_adapter, deviceArrayList);
         deviceListView.setAdapter(deviceArrayAdapter);
 
+        calcButton = (Button) findViewById(R.id.calc_button);
+        calcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double sum = 0.0;
+                double mean = 0.0;
+                double num = 0.0;
+                double sd = 0.0;
+
+                ArrayList<Long> diffs = new ArrayList<Long>();
+
+
+                for (int i = 0; i < foundTimes.size(); i++) {
+                    diffs.add(foundTimes.get(i) - startTimes.get(i));
+                }
+
+                for (long i : diffs) { sum+=i; }
+                mean = sum / diffs.size();
+
+                for (long i : diffs) {
+                    num += Math.pow((double) i - mean, 2);
+                }
+                sd = Math.sqrt(num/diffs.size());
+
+                Toast.makeText(getApplicationContext(), "mean: " + mean + "; sd: " + sd, Toast.LENGTH_LONG).show();
+            }
+        });
+
+        startTimes.add(System.currentTimeMillis());
+
         salut.discoverNetworkServices(new SalutCallback() {
             @Override
             public void call() {
+                foundTimes.add(System.currentTimeMillis());
                 deviceArrayList.add(0, salut.foundDevices.get(0).instanceName);
                 deviceArrayAdapter.notifyDataSetChanged();
                 Log.d(TAG, "Device: " + salut.foundDevices.get(0).instanceName + " found.");
-                Toast.makeText(getApplicationContext(), "Device: " + salut.foundDevices.get(0).instanceName + " found.", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "Device: " + salut.foundDevices.get(0).instanceName + " found.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), startTimes.toString() + "\n" + foundTimes.toString(), Toast.LENGTH_LONG).show();
             }
         }, true);
 
