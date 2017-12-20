@@ -84,41 +84,18 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        salut.stopNetworkService(true);
+        salut.stopNetworkService(false);
     }
 
     @Override
     public void onDataReceived(Object data) {
-//        Log.d(TAG, "Received network data.");
-//        try
-//        {
-//            Message newMessage = LoganSquare.parse((String) data, Message.class);
-//            Log.d(TAG, newMessage.sender);
-//            Log.d(TAG, newMessage.content);
-//            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
-//            Log.d(TAG, "added.");
-//            arrayAdapter.notifyDataSetChanged();
-//            listView.smoothScrollToPosition(messageArrayList.size() - 1);
-//        }
-//        catch (IOException ex)
-//        {
-//            Log.e(TAG, "Failed to parse network data.");
-//        }
-
-
         Log.d(TAG, "Received network data.");
         try
         {
             Message newMessage = LoganSquare.parse((String) data, Message.class);
-            newMessage.receiveTime = System.currentTimeMillis();
-            String speed = Long.toString((ClientActivity.trialSize * 1000)/(newMessage.receiveTime - newMessage.sendTime));
-
-            Log.d(TAG, newMessage.sender + ": " + speed + " kbps");
-
-
-            messageArrayList.add(newMessage.sender + ": " + speed + " kbps");
-            // in kbps
-
+            Log.d(TAG, newMessage.sender);
+            Log.d(TAG, newMessage.content);
+            messageArrayList.add(newMessage.sender + ": " + newMessage.content);
             Log.d(TAG, "added.");
             arrayAdapter.notifyDataSetChanged();
             listView.smoothScrollToPosition(messageArrayList.size() - 1);
@@ -127,36 +104,62 @@ public class HostActivity extends AppCompatActivity implements SalutDataCallback
         {
             Log.e(TAG, "Failed to parse network data.");
         }
+
+
+//        Log.d(TAG, "Received network data.");
+//        try
+//        {
+//            Message newMessage = LoganSquare.parse((String) data, Message.class);
+//            newMessage.receiveTime = System.currentTimeMillis();
+//            String speed = Long.toString((ClientActivity.trialSize * 1000)/(newMessage.receiveTime - newMessage.sendTime));
+//
+//            Log.d(TAG, newMessage.sender + ": " + speed + " kbps");
+//
+//
+//            messageArrayList.add(newMessage.sender + ": " + speed + " kbps");
+//            // in kbps
+//
+//            Log.d(TAG, "added.");
+//            arrayAdapter.notifyDataSetChanged();
+//            listView.smoothScrollToPosition(messageArrayList.size() - 1);
+//        }
+//        catch (IOException ex)
+//        {
+//            Log.e(TAG, "Failed to parse network data.");
+//        }
     }
 
     @Override
     public void onClick(View v) {
-//        String content = editText.getText().toString();
-//        if (!"".equals(content)) {
-//            Message toSend = new Message();
-//            toSend.content = content;
-//            toSend.sender = android.os.Build.MODEL + " (host)";
-//            salut.sendToAllDevices(toSend, new SalutCallback() {
-//                @Override
-//                public void call() {
-//                    Log.e(TAG, "The data failed to send.");
-//                }
-//            });
-//            messageArrayList.add(toSend.sender + ": " + toSend.content);
-//            arrayAdapter.notifyDataSetChanged();
-//            listView.smoothScrollToPosition(messageArrayList.size() - 1);
-//            editText.setText("");
-//        }
-        Message toSend = new Message();
-        toSend.content = ClientActivity.createKBData(ClientActivity.trialSize);
-        toSend.sender = android.os.Build.MODEL + " (host)";
-        toSend.sendTime = System.currentTimeMillis();
-        salut.sendToAllDevices(toSend, new SalutCallback() {
-            @Override
-            public void call() {
-                Log.e(TAG, "The data failed to send.");
-            }
-        });
+        String content = editText.getText().toString();
+        if (!"".equals(content)) {
+            Message toSend = new Message();
+            toSend.content = content;
+            toSend.sender = android.os.Build.MODEL + " (host)";
+            salut.sendToAllDevices(toSend, new SalutCallback() {
+                @Override
+                public void call() {
+                    Log.e(TAG, "The data failed to send.");
+                }
+            });
+            messageArrayList.add(toSend.sender + ": " + toSend.content);
+            arrayAdapter.notifyDataSetChanged();
+            listView.smoothScrollToPosition(messageArrayList.size() - 1);
+            editText.setText("");
+        }
+
+
+
+//        Message toSend = new Message();
+//        toSend.content = ClientActivity.createKBData(ClientActivity.trialSize);
+//        toSend.sender = android.os.Build.MODEL + " (host)";
+//        toSend.sendTime = System.currentTimeMillis();
+//        salut.sendToAllDevices(toSend, new SalutCallback() {
+//            @Override
+//            public void call() {
+//                Log.e(TAG, "The data failed to send.");
+//            }
+//        });
     }
 }
 
